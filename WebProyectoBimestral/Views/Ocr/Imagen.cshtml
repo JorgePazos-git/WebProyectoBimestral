@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Imagen";
+}
+
+<div class="text-center">
+    <h1 class="display-4">APLICACION WEB - DESCRIPCION IMAGEN</h1>
+    <h6>Desarrollador: Jorge Pazos</h6>
+</div>
+
+<div class="login-page">
+    <div class="form">
+        <form class="subir-imagen"method="post">
+            <p>
+                <h4>Ingrese la ruta de la Imagen:</h4>
+                <input name="ruta" type="text" placeholder="ruta de imagen" />
+            </p>
+            <p>
+                <button type="submit" class="btn-group">Buscar </button>
+            </p>
+
+            <label>
+                <p>
+                    @Html.Raw(ViewBag.text)
+                </p>
+            </label>
+
+            <p>
+                <br />
+                <label>
+                    <img src="@ViewBag.url" />
+                </label>
+            </p>
+        </form>
+    </div>
+
+</div>
+
+<style>
+    form {
+        /* Centrar el formulario en la página */
+        margin: 0 auto;
+        width: 400px;
+        /* Esquema del formulario */
+        padding: 1em;
+        border: 3px solid black;
+        border-radius: 1em;
+        font: 1em sans-serif;
+        background-color:gainsboro;
+    }
+
+    input,
+    textarea {
+        /* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra
+             Por defecto, las áreas de texto tienen un tipo de letra monoespaciada */
+        font: 1em sans-serif;
+        /* Tamaño uniforme del campo de texto */
+        width: 300px;
+        box-sizing: border-box;
+        /* Hacer coincidir los bordes del campo del formulario */
+        border: 1px solid #999;
+    }
+
+        input:focus,
+        {
+            /* Destacado adicional para elementos que tienen el cursor */
+            border-color: #000;
+        }
+
+    label {
+        margin: auto;
+        width: 360px;
+        height: auto;
+        padding: 1em;
+        border: 3px solid black;
+        border-radius: 1em;
+        font: 1em sans-serif;
+    }
+
+</style>
